@@ -1,0 +1,1 @@
+this project is configured to run locally on your machine. 

@@ -24,6 +24,10 @@ app.use(
   })
 );
 
+app.get('/test', (req, res) => {
+  res.send(__dirname);
+});
+
 // app.get('/', (req, res) => {
 //   res.json({ message: 'Welcome to the RandomIdeas API' });
 // });

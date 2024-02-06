@@ -4,6 +4,7 @@ const cors = require('cors');
 require('dotenv').config();
 const port = process.env.PORT || 5000;
 const connectDB = require('./config/db');
+const fs = require('fs');
 
 connectDB();
 
@@ -27,6 +28,11 @@ app.use(
 app.get('/test', (req, res) => {
   res.send(__dirname);
 });
+
+// app.get('/test', (req, res) => {
+//   const folderItems = fs.readdirSync(__dirname);
+//   res.json(folderItems);
+// });
 
 // app.get('/', (req, res) => {
 //   res.json({ message: 'Welcome to the RandomIdeas API' });

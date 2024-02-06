@@ -25,14 +25,14 @@ app.use(
   })
 );
 
-app.get('/test', (req, res) => {
-  res.send(__dirname);
-});
-
 // app.get('/test', (req, res) => {
-//   const folderItems = fs.readdirSync(__dirname);
-//   res.json(folderItems);
+//   res.send(__dirname);
 // });
+
+app.get('/test', (req, res) => {
+  const folderItems = fs.readdirSync(__dirname);
+  res.json(folderItems);
+});
 
 // app.get('/', (req, res) => {
 //   res.json({ message: 'Welcome to the RandomIdeas API' });
